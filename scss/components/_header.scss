@@ -1,0 +1,54 @@
+@import '../base/listas';
+@import '../base/extends';
+
+/* HEADER */
+header {
+    width: 100%;
+    .nav-header {
+        background-color: nth($colors, 1);
+        margin: 0%;
+        padding: 0%;
+        div {
+            a {
+                .logo-inicio {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: nowrap;
+                }
+            }
+            .div-nav {
+                ul {
+                    .li-header {
+                        padding: 0 30px;           
+
+                        a {
+                            font-family: nth($fonts, 1);
+                            color: nth($colors, 3);
+                            font-size: 20px;
+                        }
+
+                        ul {
+                            .li-fechas{
+                                a {
+                                    font-family: nth($fonts, 1);
+                                    color: nth($colors, 3);
+                                    font-size: 18px;                                 
+                                }
+                            }
+                        }
+                    }             
+                }
+            }
+        }
+    }
+
+    .img-header {
+        width: 100%;
+        height: auto;
+        border-top: 4px solid nth($colors, 3);
+        border-bottom: 4px solid nth($colors, 3);
+        @extend %display-center;
+        flex-wrap: nowrap;
+    }
+}
+/* FIN HEADER */
