@@ -529,6 +529,31 @@ footer .image-footer a .image-footer-redes, header .img-header, body .h1-index, 
   align-items: center;
 }
 
+/* CATALOGO */
+
+tr th {
+  color: white;
+  font-size: 20px;
+  font-family: "lato";
+  text-align: center;
+  padding: 0px ;
+}
+
+tr th button{
+  background-color:#00050e;
+  border: none;
+}
+
+#resultados tr td {
+  color: white;
+  font-size: 16px;
+  font-family: "lato";
+  text-align: center;
+}
+
+/* FIN CATALOGO */
+
+
 /* FOOTER */
 footer {
   width: 100%;
