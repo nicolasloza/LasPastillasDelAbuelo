@@ -533,7 +533,7 @@ footer .image-footer a .image-footer-redes, header .img-header, body .h1-index, 
 
 tr th {
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   font-family: "lato";
   text-align: center;
   padding: 0px ;
@@ -546,9 +546,15 @@ tr th button{
 
 #resultados tr td {
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   font-family: "lato";
   text-align: center;
+  vertical-align: middle;
+}
+
+
+td img {
+  width: 50px;
 }
 
 /* FIN CATALOGO */
