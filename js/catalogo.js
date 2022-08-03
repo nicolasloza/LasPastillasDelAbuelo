@@ -5,8 +5,8 @@ let productos = [
         "img":"../multimedia/images/catalogo/products/2020.jpg",
         "precio": 1300,
         "añoLanzamiento": "2020", 
-        "cantidad": 1
-        
+        "cantidad": 1,
+        "link": "../pages/discografia.html#veinte-cd"
     },
     {
         "id": 2,
@@ -14,7 +14,8 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/locura-y-realidad.jpg",
         "precio": 2300,
         "añoLanzamiento": "2017", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#vivo-de-pastillas"
     },
     {
         "id": 3,
@@ -22,7 +23,8 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/paradojas.jpg",
         "precio": 1700,
         "añoLanzamiento": "2015", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#paradojas"
     },
     {
         "id": 4,
@@ -30,7 +32,8 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/elbarrio.jpg",
         "precio": 1400,
         "añoLanzamiento": "2014", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#el-barrio"
     },
     {
         "id": 5,
@@ -38,7 +41,8 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/10.jpg",
         "precio": 1250,
         "añoLanzamiento": "2013                                                                                                                                                             ", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#diez-años"
     },
     {
         "id": 6,
@@ -46,7 +50,8 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/Kermesse.jpg",
         "precio": 1200,
         "añoLanzamiento": "2012", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#kermesse"
     },
     {
         "id": 7,
@@ -54,7 +59,8 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/desafios.jpg",
         "precio": 1400,
         "añoLanzamiento": "2011", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#desafios"
     },
     {
         "id": 8,
@@ -62,7 +68,8 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/versiones.jpg",
         "precio": 2500,
         "añoLanzamiento": "2010", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#versiones"
     },
     {
         "id": 9,
@@ -70,7 +77,8 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/crisis.jpg",
         "precio": 1450,
         "añoLanzamiento": "2008", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#crisis"
     },
     {
         "id": 10,
@@ -78,7 +86,8 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/discorojo.jpg",
         "precio": 1350,
         "añoLanzamiento": "2006", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#disco-rojo"
     },
     {
         "id": 11,
@@ -86,16 +95,23 @@ let productos = [
         "img": "../multimedia/images/catalogo/products/por-colectora.jpg",
         "precio": 1600,
         "añoLanzamiento": "2005", 
-        "cantidad": 1
+        "cantidad": 1,
+        "link": "../pages/discografia.html#por-colectora"
     }
 ]
 
 
 const resultados = document.getElementById('resultados');
 
-const ordenPrecio = document.getElementById('orden-precio')
-const ordenLanzamiento = document.getElementById('orden-lanzamiento')
-const ordenTitulo = document.getElementById('orden-titulo')
+const ordenPrecioDescendente = document.getElementById('orden-precio-descendente')
+const ordenPrecioAscendente = document.getElementById('orden-precio-ascendente')
+
+const ordenLanzamientoDescendente = document.getElementById('orden-lanzamiento-descendente')
+const ordenLanzamientoAscendente = document.getElementById('orden-lanzamiento-ascendente')
+
+const ordenTituloDescendente = document.getElementById('orden-titulo-descendente')
+const ordenTituloAscendente = document.getElementById('orden-titulo-ascendente')
+
 
 
 const renderizarResultados = () => {
@@ -105,8 +121,8 @@ const renderizarResultados = () => {
         let resultadoHTML = `
             <tr>
                 <td> <img class="img-disco" src="${res.img}"></td>
-                <td class="tabla-color"> ${res.nombre}</td>
-                <td class="tabla-color"> ${res.añoLanzamiento}</td>
+                <td class="tabla-color"><a href="${res.link}" target="_blank">${res.nombre}</a></td>
+                <td class="tabla-color">${res.añoLanzamiento}</td>
                 <td class="tabla-color">$${res.precio}</td>
             </tr>
         ` 
@@ -120,7 +136,7 @@ const actualizarResultados = () => {
     
     productos.forEach((res) => {
         
-        let resultadoHTML = `
+        let actualizadoHTML = `
             <tr>
                 <td> <img class="img-disco" src="${res.img}"></td>
                 <td class="tabla-color"> ${res.nombre}</td>
@@ -128,7 +144,7 @@ const actualizarResultados = () => {
                 <td class="tabla-color">$${res.precio}</td>
             </tr>
         ` 
-        resultados.innerHTML = resultadoHTML
+        resultados.innerHTML = actualizadoHTML
     })
 }
 
@@ -153,93 +169,79 @@ function busqueda() {
 }
 
 
-/* function buscadorInput() {
+ordenPrecioDescendente.addEventListener('click', () => {
 
-    const inputValue = document.getElementById('buscador')
+    ordenPrecioDescendente.classList.add('asc-des')
+    ordenPrecioAscendente.classList.remove('asc-des')
 
-    const filtradoPorTexto = resultados.filter((element) => {
-        return element.nombre.includes(inputValue)
-    })
-    
-    renderizarResultados(filtradoPorTexto)
-} */
-
-
-/*   const ordenPrecio = document.getElementById('orden-precio').onclick = function() {
-    productos.sort( function ordenDiscoPrecio(a, b) {
-    
-        if(a.precio < b.precio) {
-            return -1
-        } 
-        
-        if (a.precio > b.precio) {
-            return 1
-        } 
-        
-        console.log(productos.sort())
-        return 0
-          
-    })
-} */
-
-
-
-ordenPrecio.addEventListener('click', () => {
     productos.sort((a,b) => {
+
         if (a.precio < b.precio) {
             return -1
         } else if (a.precio > b.precio) {
             return 1
-        }      
-        return 0
+        }
     })
+    console.log(productos)
+    actualizarResultados()
+})
+
+ordenPrecioAscendente.addEventListener('click', () => {
+
+    ordenPrecioDescendente.classList.remove('asc-des')
+    ordenPrecioAscendente.classList.add('asc-des')
 
     productos.sort((a, b) => {
         if (a.precio === b.precio) {
             return 0
-        }
-
-        if (a.precio > b.precio) {
+        } else if (a.precio > b.precio) {
             return -1
         }
-        return 1
     })
-
-
+    console.log(productos)
     actualizarResultados()
-
 })
 
-ordenLanzamiento.addEventListener('click', () => {
+
+ordenLanzamientoDescendente.addEventListener('click', () => {
+
+    ordenLanzamientoDescendente.classList.add('asc-des')
+    ordenLanzamientoAscendente.classList.remove('asc-des')
+
     productos.sort((a,b) => {
 
         if (a.añoLanzamiento < b.añoLanzamiento) {
             return -1
         } else if (a.añoLanzamiento > b.añoLanzamiento) {
             return 1
-        } else {
-            return 0
         }
-    
-        
-        
     })
-
-    // productos.sort((a, b) => {
-    //     if (a.añoLanzamiento === b.añoLanzamiento) {
-    //         return 0
-    //     }
-
-    //     if (a.añoLanzamiento > b.añoLanzamiento) {
-    //         return -1
-    //     }
-    //     return 1
-    // })
-
+    console.log(productos)
     actualizarResultados()
 })
 
-ordenTitulo.addEventListener('click', () => {
+ordenLanzamientoAscendente.addEventListener('click', () => {
+
+    ordenLanzamientoDescendente.classList.remove('asc-des')
+    ordenLanzamientoAscendente.classList.add('asc-des')
+
+    productos.sort((a, b) => {
+        if (a.añoLanzamiento === b.añoLanzamiento) {
+            return 0
+        } else if (a.añoLanzamiento > b.añoLanzamiento) {
+            return -1
+        }
+    })
+    console.log(productos)
+    actualizarResultados()
+})
+
+
+ordenTituloAscendente.addEventListener('click', () => {
+
+    ordenTituloDescendente.classList.remove('asc-des')
+    ordenTituloAscendente.classList.add('asc-des')
+
     productos.sort((a,b) => { 
 
         if (a.nombre == b.nombre) {
@@ -250,40 +252,28 @@ ordenTitulo.addEventListener('click', () => {
             return 1;
         }
     })
-
+    console.log(productos)
     actualizarResultados()
 
 })
 
-/* productos.sort((a,b) => {
-    
-    if (a.añoLanzamiento < b.añoLanzamiento) {
-        return -1
-    }
+ordenTituloDescendente.addEventListener('click', () => {
 
-    if (a.añoLanzamiento > b.añoLanzamiento) {
-        return 1
-    }
-    if (a.precio < b.precio) {
-        return -1
-    }
+    ordenTituloDescendente.classList.add('asc-des')
+    ordenTituloAscendente.classList.remove('asc-des')
 
-    if (a.precio > b.precio) {
-        return 1
-    }
+    productos.sort((a,b) => { 
 
-    if (a.nombre.toLowerCase() < b.nombre.toLowerCase()) {
-        return -1
-    }
-
-    if (a.nombre.toLowerCase() > b.nombre.toLowerCase()) {
-        return 1
-    }
-    console.log('productos', productos)
-    return 0
+        if (a.nombre < b.nombre) {
+            return 1;
+        } else if (a.nombre > b.nombre) {
+            return -1;
+        }
+    })
+    console.log(productos)
+    actualizarResultados()
 
 })
-console.log(productos) */
 
 
 /* function onNameFilter() {

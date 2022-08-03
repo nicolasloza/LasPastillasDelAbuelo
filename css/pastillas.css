@@ -531,6 +531,17 @@ footer .image-footer a .image-footer-redes, header .img-header, body .h1-index, 
 
 /* CATALOGO */
 
+#buscador {
+  width: 250px;
+  font-family: 'lato';
+  font-size: 16px;
+  color: #acacac;
+  background-color:#00091b;
+  border: 2px solid #acacac;
+  padding: 5px;
+  margin: 10px 0px 20px 0px;
+}
+
 tr th {
   color: white;
   font-size: 22px;
@@ -552,9 +563,30 @@ tr th button{
   vertical-align: middle;
 }
 
+#resultados tr td a {
+  text-decoration: none;
+  color: white;
+}
 
 td img {
   width: 50px;
+}
+
+.asc-des {
+  visibility: hidden !important;
+  display: none;
+}
+
+.titulo {
+  width: 466px;
+}
+
+.lanzamiento {
+  width: 483px;
+}
+
+.precio {
+  width: 208px;
 }
 
 /* FIN CATALOGO */
