@@ -537,8 +537,9 @@ footer .image-footer a .image-footer-redes, header .img-header, body .h1-index, 
   font-size: 16px;
   color: #acacac;
   background-color:#00091b;
+  border-radius: 25px;
   border: 2px solid #acacac;
-  padding: 5px;
+  padding: 5px 0px 5px 10px;
   margin: 10px 0px 20px 0px;
 }
 
