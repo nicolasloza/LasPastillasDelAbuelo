@@ -97,48 +97,49 @@
     <!-- Main -->
     <main class="container">
         <div>
-            
+    
             <input type="text" id="buscador" placeholder="Buscar...">
-            
+    
             <table class="table">
-                    <tr>
-                        <th></th>
-                        <th class="titulo">Título del CD 
-                            <div id="toggle-orden-titulo">
-                                <button id="orden-titulo-descendente" class="asc-des">
-                                    <img class="img-descendente" src="../multimedia/images/catalogo/chevron.png" alt="">
-                                </button>
-                                <button id="orden-titulo-ascendente">
-                                    <img class="img-ascendente" src="../multimedia/images/catalogo/chevron2.png" alt="">
-                                </button>
-                            </div>
-                        </th>
-                        
-                        <th class="lanzamiento">Año de lanzamiento 
-                            <div id="toggle-orden-lanzamiento"> 
-                                <button id="orden-lanzamiento-descendente" class="asc-des"> 
-                                    <img src="../multimedia/images/catalogo/chevron.png" alt="">
-                                </button>
-                                <button id="orden-lanzamiento-ascendente" >
-                                    <img class="img-ascendente" src="../multimedia/images/catalogo/chevron2.png" alt="">
-                                </button>
-                            </div>
-                        </th>
-                        
-                        <th class="precio">Precio
-                            <div id="toggle-orden-precio"> 
-                                <button id="orden-precio-descendente" class="asc-des">
-                                    <img src="../multimedia/images/catalogo/chevron.png" alt="">
-                                </button>
-                                <button id="orden-precio-ascendente" >
-                                    <img class="img-ascendente" src="../multimedia/images/catalogo/chevron2.png" alt="">
-                                </button>
-                            </div>
-                        </th>
-                    </tr>
-                    
-                    <tbody id="resultados">
-                        
+                <tr class="tr-orden">
+                    <th></th>
+                    <th class="titulo">
+                        <p>Título del CD </p> 
+                        <div id="toggle-orden-titulo">
+                            <button id="orden-titulo-descendente" ><!-- class="asc-des" -->
+                                <img class="img-descendente" src="../multimedia/images/catalogo/chevron.png" alt="">
+                            </button>
+                            <button id="orden-titulo-ascendente">
+                                <img class="img-ascendente" src="../multimedia/images/catalogo/chevron2.png" alt="">
+                            </button>
+                        </div>
+                    </th>
+    
+                    <th class="lanzamiento">Año de lanzamiento
+                        <div id="toggle-orden-lanzamiento">
+                            <button id="orden-lanzamiento-descendente" class="asc-des">
+                                <img src="../multimedia/images/catalogo/chevron.png" alt="">
+                            </button>
+                            <button id="orden-lanzamiento-ascendente">
+                                <img class="img-ascendente" src="../multimedia/images/catalogo/chevron2.png" alt="">
+                            </button>
+                        </div>
+                    </th>
+    
+                    <th class="precio">Precio
+                        <div id="toggle-orden-precio">
+                            <button id="orden-precio-descendente" class="asc-des">
+                                <img src="../multimedia/images/catalogo/chevron.png" alt="">
+                            </button>
+                            <button id="orden-precio-ascendente">
+                                <img class="img-ascendente" src="../multimedia/images/catalogo/chevron2.png" alt="">
+                            </button>
+                        </div>
+                    </th>
+                </tr>
+    
+                <tbody id="resultados">
+    
                 </tbody>
             </table>
         </div>

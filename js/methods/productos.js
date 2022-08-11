@@ -2,9 +2,9 @@ const productos = [
     {
         "id": 1,
         "nombre": "2020",
-        "img":"../multimedia/images/catalogo/products/2020.jpg",
+        "img": "../multimedia/images/catalogo/products/2020.jpg",
         "precio": 1300,
-        "añoLanzamiento": 2020, 
+        "añoLanzamiento": 2020,
         "cantidad": 1,
         "link": "../pages/discografia.html#veinte-cd"
     },
@@ -13,7 +13,7 @@ const productos = [
         "nombre": "Locura y Realidad",
         "img": "../multimedia/images/catalogo/products/locura-y-realidad.jpg",
         "precio": 2300,
-        "añoLanzamiento": 2017, 
+        "añoLanzamiento": 2017,
         "cantidad": 1,
         "link": "../pages/discografia.html#vivo-de-pastillas"
     },
@@ -22,7 +22,7 @@ const productos = [
         "nombre": "Paradojas",
         "img": "../multimedia/images/catalogo/products/paradojas.jpg",
         "precio": 1700,
-        "añoLanzamiento": 2015, 
+        "añoLanzamiento": 2015,
         "cantidad": 1,
         "link": "../pages/discografia.html#paradojas"
     },
@@ -31,7 +31,7 @@ const productos = [
         "nombre": "El Barrio en sus Puños",
         "img": "../multimedia/images/catalogo/products/elbarrio.jpg",
         "precio": 1400,
-        "añoLanzamiento": 2014, 
+        "añoLanzamiento": 2014,
         "cantidad": 1,
         "link": "../pages/discografia.html#el-barrio"
     },
@@ -40,7 +40,7 @@ const productos = [
         "nombre": "10 años",
         "img": "../multimedia/images/catalogo/products/10.jpg",
         "precio": 1250,
-        "añoLanzamiento": 2013,                                                                                                                                                            
+        "añoLanzamiento": 2013,
         "cantidad": 1,
         "link": "../pages/discografia.html#diez-años"
     },
@@ -49,7 +49,7 @@ const productos = [
         "nombre": "Kermesse",
         "img": "../multimedia/images/catalogo/products/Kermesse.jpg",
         "precio": 1200,
-        "añoLanzamiento": 2012, 
+        "añoLanzamiento": 2012,
         "cantidad": 1,
         "link": "../pages/discografia.html#kermesse"
     },
@@ -58,7 +58,7 @@ const productos = [
         "nombre": "Desafios",
         "img": "../multimedia/images/catalogo/products/desafios.jpg",
         "precio": 1400,
-        "añoLanzamiento": 2011, 
+        "añoLanzamiento": 2011,
         "cantidad": 1,
         "link": "../pages/discografia.html#desafios"
     },
@@ -67,7 +67,7 @@ const productos = [
         "nombre": "Versiones",
         "img": "../multimedia/images/catalogo/products/versiones.jpg",
         "precio": 2500,
-        "añoLanzamiento": 2010, 
+        "añoLanzamiento": 2010,
         "cantidad": 1,
         "link": "../pages/discografia.html#versiones"
     },
@@ -76,7 +76,7 @@ const productos = [
         "nombre": "Crisis",
         "img": "../multimedia/images/catalogo/products/crisis.jpg",
         "precio": 1450,
-        "añoLanzamiento": 2008, 
+        "añoLanzamiento": 2008,
         "cantidad": 1,
         "link": "../pages/discografia.html#crisis"
     },
@@ -85,7 +85,7 @@ const productos = [
         "nombre": "Las Pastillas del Abuelo",
         "img": "../multimedia/images/catalogo/products/discorojo.jpg",
         "precio": 1350,
-        "añoLanzamiento": 2006, 
+        "añoLanzamiento": 2006,
         "cantidad": 1,
         "link": "../pages/discografia.html#disco-rojo"
     },
@@ -94,7 +94,7 @@ const productos = [
         "nombre": "Por Colectora",
         "img": "../multimedia/images/catalogo/products/por-colectora.jpg",
         "precio": 1600,
-        "añoLanzamiento": 2005, 
+        "añoLanzamiento": 2005,
         "cantidad": 1,
         "link": "../pages/discografia.html#por-colectora"
     }
